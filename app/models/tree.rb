@@ -1,6 +1,7 @@
 class Tree < ApplicationRecord
   belongs_to :user
   has_many :adoptions, dependent: :destroy
+  has_one_attached :photo
   validates :name, presence: true
   validates :address, presence: true
   validates :fruits, presence: true
